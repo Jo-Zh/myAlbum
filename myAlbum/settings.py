@@ -21,11 +21,13 @@ MEDIA_URL=('uploads/')
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-dhfnwsahof5ckbk03ew)t-6!3j=ewk85f*%o(djwd_j%2##-ri'
-# SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY =os.environ.get( 'django-insecure-dhfnwsahof5ckbk03ew)t-6!3j=ewk85f*%o(djwd_j%2##-ri')
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# DEBUG=False
+# DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+
+
 ALLOWED_HOSTS = []
 # ["vostro.org", "www.vostro.org"]
 
