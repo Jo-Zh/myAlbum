@@ -1,0 +1,21 @@
+{%extends "base.html"%}
+{%block title%} My Album {%endblock%}
+{%block content%}
+
+<section class="card">
+    <h1>Hi {{user}}, here is your collection.</h1>
+    <div>
+        <ul>
+            {% for album in albums %}
+
+            <li><a href="{% url 'albumdetail' album.id %}">{{album.title}}</a><a class="delete"
+                    href="{% url 'delete' album.id %}"> | delete</a></li>
+
+            {% endfor %}
+        </ul>
+
+    </div>
+    <a href="{% url 'uploadform' %}"><strong>New Album</strong></a>
+
+</section>
+{%endblock%}

@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}{%endblock%}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'css/favicon-16x16.png' %}">
+</head>
+
+<body>
+    <header>
+        <ul>
+            {% if user.is_authenticated %}
+            <li> <a href="{% url 'logout'%}">LogOut</a></li>
+            {% else %}
+            <li> <a href="{% url 'login'%}">Sign In |</a></li>
+            <li> <a href="{% url 'signup' %}">| Sign Up</a></li>
+            {% endif %}
+
+        </ul>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{%  url 'home'%}">Home</a></li>
+            <li><a href="{% url 'recording' %}">Save A Moment</a> </li>
+            <li><a href="{% url 'myAlbum' %}">My Album</a></li>
+        </ul>
+    </nav>
+    {%block content%}
+    {%endblock%}
+
+</body>
+
+</html>

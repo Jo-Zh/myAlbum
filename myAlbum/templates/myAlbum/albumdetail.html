@@ -1,0 +1,18 @@
+{%extends "base.html"%}
+{%block title%} {{album.title}} {%endblock%}
+{%block content%}
+
+<section>
+    <h1>{{album.title}}</h1>
+    <div>
+        <p>{{album.created_by}}</p>
+        <p>{{album.script}}</p>
+        <p>{{MEDIA_URL}}</p>
+        <img src="../uploads/{{album.media}}" alt="">
+        <!-- this is a bug, need find someway to instead of ../uploads/ -->
+
+    </div>
+    <a href="{% url 'uploadform' %}"><strong>New Album</strong></a>
+
+</section>
+{%endblock%}

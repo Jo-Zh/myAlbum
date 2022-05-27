@@ -1,0 +1,14 @@
+{%extends "base.html"%}
+{%block title%} Delete Item {%endblock%}
+{%block content%}
+
+<!-- Create a Form -->
+<form method="POST">
+    <!-- Security token by Django -->
+    {% csrf_token %}
+    Do you want to delete this item ?
+    <input type="submit" value="Yes" />
+    <a href="{% url 'myAlbum' %}">Cancel </a>
+</form>
+
+{%endblock%}

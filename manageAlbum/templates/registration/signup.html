@@ -1,0 +1,21 @@
+{%extends "base.html"%}
+{%block title%} Sign up {%endblock%}
+{%block content%}
+
+<div>
+    <h1>Register Form</h1>
+    <hr />
+    {%if messages%}
+    {%for message in messages%}
+    <p>{{message}}</p>
+    {%endfor%}
+    {%endif%}
+    <form method="POST">
+        {%csrf_token%}
+        {{ form.as_p}}
+        <input type="submit" value="Sign Up">
+    </form>
+
+</div>
+
+{%endblock%}
