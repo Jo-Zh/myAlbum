@@ -22,8 +22,10 @@ MEDIA_URL=('uploads/')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-dhfnwsahof5ckbk03ew)t-6!3j=ewk85f*%o(djwd_j%2##-ri'
-with open('/etc/secret_key.txt') as f:
-    SECRET_KEY = f.read().strip()
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
+
+# with open('/etc/secret_key.txt') as f:
+    # SECRET_KEY = f.read().strip()
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
