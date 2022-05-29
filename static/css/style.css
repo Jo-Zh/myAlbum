@@ -61,3 +61,6 @@ nav a:hover {
 .card a {
   color: antiquewhite;
 }
+.message {
+  color: rgb(237, 203, 5);
+}

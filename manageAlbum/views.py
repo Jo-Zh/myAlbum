@@ -12,7 +12,10 @@ def SignUpView(req):
         regForm=CustomUserCreationForm(req.POST)
         if regForm.is_valid():
             regForm.save()
-            messages.success(req, 'User has been registered!')
+            messages.success(req, 'User has been registered, please go to sign in!')
+            return redirect('/manage/login/')
+        else:
+            messages.info(req, 'invailed register, try again')
     return render(req, 'registration/signup.html', {'form':form})
 
 
