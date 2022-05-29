@@ -1,1 +1,1 @@
-web: gunicorn myAlbum.wsgi --log-file --preload
+web: gunicorn myAlbum.wsgi --log-file
