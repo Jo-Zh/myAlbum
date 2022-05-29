@@ -17,3 +17,5 @@ Here is just a quick summary about the deployment I would like to share:
 my app is running on https://safe-atoll-49171.herokuapp.com/. most of functions are working except uploading files.
 when I click new album go to the new site create new one. I can fill the form with title, description, style, author, choose media file, a picture for example, from my local computer. but the file will not show on the website or actually it will not be uploaded.
 I checked the heroku document, and cannot find a free way to do this. I only find to add a add-on with extra cost, refer to: https://devcenter.heroku.com/articles/simple-file-upload.
+
+web: gunicorn myAlbum.wsgi --log-file -
