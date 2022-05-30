@@ -5,11 +5,15 @@
 <section>
     <h1>{{album.title}}</h1>
     <div>
-        <p>{{album.created_by}}</p>
+        <p class="sub">--this article written by {{album.created_by}}</p>
+
         <p>{{album.script}}</p>
-        <p>{{MEDIA_URL}}</p>
+
+        <br>
         <img src="{{album.media.url}}" alt="">
-        <!-- this is a bug, need find someway to instead of ../uploads/ -->
+
+        <a href="{{album.media.url}}">file</a>
+
 
     </div>
     <a href="{% url 'uploadform' %}"><strong>New Album</strong></a>
