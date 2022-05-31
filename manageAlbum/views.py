@@ -19,13 +19,15 @@ def SignUpView(req):
     return render(req, 'registration/signup.html', {'form':form})
 
 
-AlbumForm=modelform_factory(Album, exclude=[])
+AlbumForm=modelform_factory(Album, exclude=["created_by"])
 
 def new(req):
     if req.method=='POST':
         form=AlbumForm(req.POST, req.FILES)
         if form.is_valid():
-            form.save()
+            instance=form.save(commit=False)
+            instance.created_by=req.user
+            instance.save()
             print('record saved')
             return redirect('myAlbum')
         else:

@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.urls import reverse
+from django.conf import settings
 
 
 # Create your models here.
@@ -29,7 +30,7 @@ class Album(models.Model):
     script=models.TextField()
     media=models.FileField(upload_to='media', null=True, blank=True)
     # author = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-    created_by = models.ForeignKey(CustomUser,on_delete=models.CASCADE)
+    created_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     style = models.ManyToManyField(Style, help_text='Select a style for this album')
 
 
