@@ -4,12 +4,21 @@
 {%block content%}
 
 <section>
-    <h1>Welcome back {{user}}!</h1>
+
+    <h1>
+        {% if user.is_authenticated %}
+        Welcome back {{user}}!
+        {% else %}
+        Please Sign In to manage your album, or create your account using Sign Up
+        {% endif %}
+    </h1>
+
     <div>
 
         <h2>There are {{num}} Albums in total.</h2>
 
     </div>
+
 
 </section>
 {%endblock content%}
