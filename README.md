@@ -3,6 +3,11 @@
 <h2>Introduction</h2>
 A simple Django App for users login and upload or save their moment, videos, picutres etc. files. Besides with integraed video record function.
 
+<h3>what you can do</h3>
+<p>
+In Home page, user can see how many records in total in the app. User need to login to use myalbum, save a moment functions <br>In myalbum site: <br>user sees own records and can simply creates ,deletes, browsers own posts. At this moment user cannot see others' posts. And at this stage, user can only upload images and other files except video. <br>In save a moment site:<br>user can use save a moment link to catch a 5s video and save in local downloads file directory.
+</p>
+
 <h2>Deployment process</h2>
 This app is deployed on heroku http://myalbum-djangoapp.herokuapp.com/. 
 Here is just a short summary about the deployment experience I would like to share:
@@ -24,12 +29,8 @@ Here is just a short summary about the deployment experience I would like to sha
    2.4 After successfully building, run heroku run python3 manage.py migrate, heroku run python3 manage.py createsuperuser
 </li>
 <li>Issues:
-   3.1 uploading files:
-   Most of functions are working except uploading files.
-   when I click new album go to the new site create new one. I can fill the form with title, description, style, author, choose media file, a picture for example, from my local computer. but the file will not show on the website or actually it will not be uploaded.
-   I checked the heroku document, and cannot find a free way to do this. I only find to add a add-on with extra cost, refer to: https://devcenter.heroku.com/articles/simple-file-upload.
-
-3.2 the web loading is slow.
+The web loading is really slow.
+User cannot see others' posts, the sharing function hasn't added yet.
 
 </li>
 <ol>
