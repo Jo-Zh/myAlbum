@@ -5,7 +5,7 @@ A simple Django App for users login and upload or save their moment, videos, pic
 
 <h3>what you can do</h3>
 <p>
-In Home page, user can see how many records in total in the app. User need to login to use myalbum, save a moment functions <br>In myalbum site: <br>user sees own records and can simply creates ,deletes, browsers own posts. At this moment user cannot see others' posts. And at this stage, user can only upload images and other files except video. <br>In save a moment site:<br>user can use save a moment link to catch a 5s video and save in local downloads file directory.
+In Home page, user can see how many records in total in the app. User need to login to use myalbum, save a moment functions <br>In myalbum site: <br>user sees own records and can simply create ,delete, browser own posts. At this moment user cannot see others' posts. And at this stage, user can only upload images and other files except video. <br>In save a moment site:<br>user can use save a moment link to catch a 5s video and save in local downloads file directory.
 </p>
 
 <h2>Deployment process</h2>
@@ -35,4 +35,4 @@ User cannot see others' posts, the sharing function hasn't added yet.
 </li>
 <ol>
 <hr>
-<h5>Any ideas would be welcomed and appreciated</h5>
+<h4>Any ideas would be welcomed and appreciated</h4>
