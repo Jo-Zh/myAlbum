@@ -2,7 +2,7 @@
 
 <h2>Introduction</h2>
 A simple Django App for users login and upload or save their moment, videos, picutres etc. files. Besides with integraed video record function.
-
+<img src="static/css/myalbumcover.png" width="500"/>
 <h3>what you can do</h3>
 <p>
 In Home page, user can see how many records in total in the app. User need to login to use myalbum, save a moment functions <br>In myalbum site: <br>user sees own records and can simply create ,delete, browser own posts. At this moment user cannot see others' posts. And at this stage, user can only upload images and other files except video. <br>In save a moment site:<br>user can use save a moment link to catch a 5s video and save in local downloads file directory.
