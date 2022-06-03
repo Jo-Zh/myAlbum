@@ -109,3 +109,16 @@ button:hover {
   border: 2px solid wheat;
   border-radius: 5%;
 }
+.intro {
+  margin: auto;
+  width: 45%;
+  border: 3px solid wheat;
+  border-radius: 5%;
+  color: rgb(59, 123, 163);
+  background-color: rgba(247, 244, 244, 0.8);
+}
+.intro p {
+  padding: 10px;
+  margin: auto;
+  text-align: justify;
+}

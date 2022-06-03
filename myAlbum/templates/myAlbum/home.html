@@ -2,7 +2,7 @@
 {% load static %}
 {%block title%} Album Home {%endblock%}
 {%block content%}
-
+<hr>
 <section>
 
     <h1>
@@ -12,13 +12,22 @@
         Please Sign In to manage your album, or create your account using Sign Up
         {% endif %}
     </h1>
-
-    <div>
-
-        <h2>There are {{num}} Albums in total.</h2>
-
-    </div>
+    <h2>There are {{num}} Albums in total.</h2>
 
 
 </section>
+
+<div class="intro">
+
+
+    <h2>Here you can do....</h2>
+    <p>Using "Save A Moment" to: <br>
+        - catch a 5s short Video or Picture and <br>
+        - download to your local storage by clicking "Save" button</p>
+    <p>Using "My Album" to :<br>
+        - create new record with title, description and a photo picture file or other types of file.<br>
+        - delete record you created
+    </p>
+
+</div>
 {%endblock content%}

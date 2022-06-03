@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse, get_object_or_404, redirect
 from manageAlbum import models
+from django.contrib import messages
 
 def homepage(req):
     # num=models.Album.objects.all().filter(created_by=req.user).count()
@@ -12,7 +13,9 @@ def myAlbum(req):
         
         return render(req, "myAlbum/album.html",{'albums':authorAlbum, "user":req.user})
     else:
-        return HttpResponse("need login firstly!")
+        messages.info(req, 'Please Login or Sign Up!')
+        return redirect("/")
+        # return HttpResponse("need login firstly!")
 
 def detail(req, id):
     album=get_object_or_404(models.Album, pk=id)

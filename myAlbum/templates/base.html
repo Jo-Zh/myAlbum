@@ -29,7 +29,13 @@
             <li><a href="{% url 'recording' %}">Save A Moment</a> </li>
             <li><a href="{% url 'myAlbum' %}">My Album</a></li>
         </ul>
+
     </nav>
+    {%if messages%}
+    {%for message in messages%}
+    <h2 class="message">{{message}}</h2>
+    {%endfor%}
+    {%endif%}
     {%block content%}
     {%endblock%}
 
