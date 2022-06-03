@@ -37,6 +37,7 @@ header a {
 }
 nav > ul {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding: 1em;
   justify-content: space-between;
@@ -121,4 +122,24 @@ button:hover {
   padding: 10px;
   margin: auto;
   text-align: justify;
+}
+
+@media screen and (max-width: 600px) {
+  .nav ul {
+    flex-direction: column;
+    width: 40%;
+    height: 100vh;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 18px;
+  }
+  .intro {
+    width: 80%;
+  }
 }
