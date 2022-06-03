@@ -124,7 +124,7 @@ button:hover {
   text-align: justify;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .nav ul {
     flex-direction: column;
     width: 40%;
