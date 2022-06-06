@@ -1,7 +1,7 @@
 # myAlbum
 
 <h2>Introduction</h2>
-A simple Django App for users login and upload or save their moment, videos, picutres etc. files. Besides with integraed video record function.
+A simple Django App designed to save photos, make picture collections or catch a beautiful moment.
 <img src="static/css/myalbumcover.png" width="500"/>
 <h3>what you can do</h3>
 <p>
