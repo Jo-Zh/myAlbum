@@ -7,22 +7,22 @@ body {
   background-size: cover;
   color: wheat;
   text-align: center;
+  font-size: 20px;
 }
 a {
   color: antiquewhite;
 }
 nav {
   margin-top: 20px;
-  padding: 0;
-  /* list-style: none; */
-
-  font-size: large;
+  padding: 0.5em;
+  font-size: larger;
 }
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 20pt;
+  padding: 0.5em;
+  height: fit-content;
   background-color: rgb(18, 16, 16);
 }
 header > ul {
@@ -37,6 +37,7 @@ header a {
 }
 nav > ul {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding: 1em;
   justify-content: space-between;
@@ -45,11 +46,16 @@ nav > ul {
 nav a {
   border: 1px solide wheat;
   border-radius: 20%;
-  color: rgb(25, 156, 25);
+  font-weight: bold;
+  color: rgb(248, 216, 35);
+  text-decoration: none;
+  background-color: rgb(59, 123, 163);
 }
 nav a:hover {
-  font-style: italic;
-  color: rgb(248, 216, 35);
+  /* font-style: italic; */
+  display: inline-block;
+  transform: skewX(-20deg);
+  transition: 0.5s;
 }
 
 .card {
@@ -60,4 +66,80 @@ nav a:hover {
 }
 .card a {
   color: antiquewhite;
+}
+.message {
+  color: rgb(237, 203, 5);
+}
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 300px;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(246, 247, 248);
+}
+section {
+  text-align: center;
+}
+p {
+  padding: 1em;
+  text-align: center;
+}
+
+.sub {
+  text-align: center;
+}
+
+button {
+  margin: 2em;
+  width: fit-content;
+  height: 40px;
+  background-color: rgb(59, 123, 163);
+
+  color: wheat;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: inherit;
+}
+button:hover {
+  box-shadow: 3px 3px 10px wheat;
+}
+.recorder {
+  border: 2px solid wheat;
+  border-radius: 5%;
+}
+.intro {
+  margin: auto;
+  width: 45%;
+  border: 3px solid wheat;
+  border-radius: 5%;
+  color: rgb(59, 123, 163);
+  background-color: rgba(247, 244, 244, 0.8);
+}
+.intro p {
+  padding: 10px;
+  margin: auto;
+  text-align: justify;
+}
+
+@media screen and (max-width: 650px) {
+  .nav ul {
+    flex-direction: column;
+    width: 40%;
+    height: 100vh;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 18px;
+  }
+  .intro {
+    width: 80%;
+  }
 }

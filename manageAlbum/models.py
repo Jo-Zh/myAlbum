@@ -27,8 +27,8 @@ class Author(models.Model):
 
 class Album(models.Model):
     title=models.CharField(max_length=20)
-    script=models.TextField()
-    media=models.FileField(upload_to='media', null=True, blank=True)
+    description=models.TextField()
+    images=models.FileField(upload_to='media', null=True, blank=True)
     # author = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     created_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     style = models.ManyToManyField(Style, help_text='Select a style for this album')
